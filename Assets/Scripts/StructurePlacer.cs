@@ -7,6 +7,7 @@ public class StructurePlacer : MonoBehaviour {
 
     public GameObject structurePrefab;
     private GameObject structure;
+    SpriteRenderer sr;
 
     private bool canPlaceStructure()
     {
@@ -14,7 +15,7 @@ public class StructurePlacer : MonoBehaviour {
 
     }
 	void Start () {
-		
+        sr = GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -29,6 +30,7 @@ public class StructurePlacer : MonoBehaviour {
             structure = (GameObject)Instantiate(structurePrefab, transform.position, Quaternion.identity);
             Debug.Log(transform.position);
             Debug.Log(structure);
+            sr.enabled = false;
 
         }
     }
