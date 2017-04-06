@@ -1,0 +1,17 @@
+/Users/jan-sebastian.nystedt/Tower-Defense/Temp/bin/Debug/UnityEngine.dll
+/Users/jan-sebastian.nystedt/Tower-Defense/Temp/bin/Debug/UnityEditor.dll
+/Users/jan-sebastian.nystedt/Tower-Defense/Temp/bin/Debug/UnityEngine.Analytics.dll
+/Users/jan-sebastian.nystedt/Tower-Defense/Temp/bin/Debug/UnityEngine.PlaymodeTestsRunner.dll
+/Users/jan-sebastian.nystedt/Tower-Defense/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/jan-sebastian.nystedt/Tower-Defense/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/jan-sebastian.nystedt/Tower-Defense/Temp/bin/Debug/UnityEngine.HoloLens.dll
+/Users/jan-sebastian.nystedt/Tower-Defense/Temp/bin/Debug/UnityEngine.VR.dll
+/Users/jan-sebastian.nystedt/Tower-Defense/Temp/bin/Debug/Mono.Cecil.dll
+/Users/jan-sebastian.nystedt/Tower-Defense/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/jan-sebastian.nystedt/Tower-Defense/Temp/bin/Debug/Unity.DataContract.dll
+/Users/jan-sebastian.nystedt/Tower-Defense/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/jan-sebastian.nystedt/Tower-Defense/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/jan-sebastian.nystedt/Tower-Defense/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/jan-sebastian.nystedt/Tower-Defense/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/jan-sebastian.nystedt/Tower-Defense/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/jan-sebastian.nystedt/Tower-Defense/Temp/bin/Debug/Mono.Cecil.Mdb.dll

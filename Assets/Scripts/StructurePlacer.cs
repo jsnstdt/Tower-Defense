@@ -14,6 +14,18 @@ public class StructurePlacer : MonoBehaviour {
         return structure == null;
 
     }
+
+	private bool canUpgradeStructure() {
+		if (structure != null) {
+			StructureData structureData = structure.GetComponent<StructureData> ();
+			StructureLevel nextLevel = structureData.getNextLevel ();
+			if (nextLevel != null) {
+				return true;
+			}
+		}
+		return false;
+	}
+
 	void Start () {
         sr = GetComponent<SpriteRenderer>();
 	}
@@ -23,15 +35,16 @@ public class StructurePlacer : MonoBehaviour {
 		
 	}
 
+
+
     void OnMouseUp()
     {
-        if (canPlaceStructure())
-        {
-            structure = (GameObject)Instantiate(structurePrefab, transform.position, Quaternion.identity);
-            Debug.Log(transform.position);
-            Debug.Log(structure);
-            sr.enabled = false;
+		if (canPlaceStructure ()) {
+			structure = (GameObject)Instantiate (structurePrefab, transform.position, Quaternion.identity);
+			sr.enabled = false;
 
-        }
+		} else if (canUpgradeStructure ()) {
+			structure.GetComponent<StructureData> ().increaseLevel ();
+		}
     }
 }

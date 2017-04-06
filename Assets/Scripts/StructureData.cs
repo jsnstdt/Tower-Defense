@@ -2,31 +2,68 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 [System.Serializable]
-public class StructureType
-{
-    public int[] cost;
-    public Sprite[] sprites;
+
+public class StructureLevel {
+	public int cost;
+	public GameObject visualization;
 }
-
-public StructureType CurrentLevel
-{
-    get
-    {
-        return currentLevel;
-    }
-}
-
-
+	
 public class StructureData : MonoBehaviour {
 
-    public List<StructureType> types;
-    private StructureLevel currentLevel;
+	private StructureLevel currentLevel;
+	public List<StructureLevel> levels;
+	public StructureLevel CurrentLevel {
+		get {
+			return currentLevel;
+		}
+		set {
+			currentLevel = value;
+			int currentLevelIndex = levels.IndexOf (currentLevel);
+
+			GameObject levelVisualization = levels [currentLevelIndex].visualization;
+			for (int i = 0; i < levels.Count; i++) {
+				if (levelVisualization != null) {
+					if (i == currentLevelIndex) {
+						levels [i].visualization.SetActive (true);
+					} else {
+						levels [i].visualization.SetActive (false);
+
+					}
+				}
+			}
+		}
+	}
+		
+	public StructureLevel getNextLevel() {
+		int currentLevelIndex = levels.IndexOf (currentLevel);
+		int maxLevelIndex = levels.Count - 1;
+		if (currentLevelIndex < maxLevelIndex) {
+			return levels [currentLevelIndex + 1];
+		} else {
+			return null;
+		}
+	}
+
+	public void increaseLevel() {
+		int currentLevelIndex = levels.IndexOf (currentLevel);
+		if (currentLevelIndex < levels.Count - 1) {
+			CurrentLevel = levels [currentLevelIndex + 1];
+		}
+	}
+
+
+
+
 
 	// Use this for initialization
 	void Start () {
+					
 		
+	}
+
+	void OnEnable() {
+		CurrentLevel = levels [0];
 	}
 	
 	// Update is called once per frame
