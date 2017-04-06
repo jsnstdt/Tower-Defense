@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour {
     void Start()
     {
         Instantiate(enemyPrefab).GetComponent<MoveEnemy>().waypoints = waypoints;
+		Gold = 1000;
     }
     // Update is called once per frame
     void Update () {
